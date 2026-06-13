@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mission Control — Shubham's next-step advisor</title>
+<meta name="description" content="A personal AI advisor that tells me what to do next, every step of the way, across career, content, learning, and health.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23c9a96e' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23c9a96e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070708;--card:#101014;--bdr:#1c1c22;--bdr2:#26262e;--gold:#c9a96e;--gold-hi:#e8cfa0;
+  --ink:#e9e5dc;--txt:#b9b4a9;--mut:#807c73;--dim:#55524c;--ok:#4ade80;--warn:#fbbf24;
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-weight:300;-webkit-font-smoothing:antialiased}
+::selection{background:var(--gold);color:#000}
+a{color:var(--gold);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:36px 20px 90px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(30px,5vw,46px);color:var(--ink);line-height:1.1;margin:12px 0 6px}
+h1 em{font-style:italic;color:var(--gold-hi)}
+.sub{font-size:15px;color:var(--mut);max-width:60ch;line-height:1.7}
+.tabs{display:flex;gap:6px;margin:30px 0 20px;flex-wrap:wrap}
+.tab{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);
+  border:1px solid var(--bdr2);border-radius:100px;padding:9px 18px;cursor:pointer;background:transparent;transition:all .3s}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--gold);color:#0a0a0c;border-color:var(--gold)}
+.panel{display:none}.panel.on{display:block}
+/* roadmap */
+.tracks{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.track{background:var(--card);border:1px solid var(--bdr);border-radius:14px;padding:20px;transition:all .35s}
+.track:hover{border-color:#c9a96e3d;transform:translateY(-3px)}
+.track h3{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);display:flex;align-items:center;gap:9px;margin-bottom:3px}
+.track .goal{font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.6}
+.now{background:#1a160c;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 13px;margin-bottom:10px}
+.now .lbl{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.now .txt{font-size:13.5px;color:var(--ink);line-height:1.55;margin-top:4px}
+.steps{list-style:none;font-size:13px;color:var(--txt)}
+.steps li{padding:5px 0 5px 20px;position:relative;line-height:1.5}
+.steps li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:var(--dim)}
+.steps li.done::before{background:var(--ok)}
+.steps li.done{color:var(--dim);text-decoration:line-through}
+.metric{font-family:var(--mono);font-size:10px;color:var(--mut);margin-top:12px;letter-spacing:.05em}
+/* chat */
+.chat-wrap{display:grid;grid-template-columns:1fr;gap:0;background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;max-width:760px}
+.chat-head{padding:14px 18px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.chat-head .t{font-family:var(--serif);font-size:17px;color:var(--ink)}
+.chat-head select,.chat-head input{background:#0b0b0e;border:1px solid var(--bdr2);color:var(--txt);
+  font-family:var(--mono);font-size:11px;border-radius:8px;padding:7px 9px}
+.msgs{padding:18px;min-height:300px;max-height:52vh;overflow-y:auto;display:flex;flex-direction:column;gap:14px}
+.m{max-width:88%;padding:11px 15px;border-radius:14px;font-size:14px;line-height:1.65;white-space:pre-wrap}
+.m.u{align-self:flex-end;background:#1a160c;border:1px solid #c9a96e33;color:var(--ink)}
+.m.a{align-self:flex-start;background:#0c0c10;border:1px solid var(--bdr);color:var(--txt)}
+.m.a b,.m.a strong{color:var(--gold-hi);font-weight:600}
+.m.sys{align-self:center;font-family:var(--mono);font-size:11px;color:var(--dim);text-align:center;max-width:100%}
+.compose{display:flex;gap:8px;padding:14px 16px;border-top:1px solid var(--bdr)}
+.compose textarea{flex:1;background:#0b0b0e;border:1px solid var(--bdr2);color:var(--ink);border-radius:10px;
+  padding:11px;font-family:var(--sans);font-size:14px;resize:none;min-height:46px;max-height:140px}
+.send{background:var(--gold);color:#0a0a0c;border:none;border-radius:10px;padding:0 20px;font-family:var(--mono);
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:opacity .2s}
+.send:disabled{opacity:.4;cursor:default}
+.quick{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 14px}
+.qbtn{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--mut);border:1px solid var(--bdr2);
+  border-radius:100px;padding:6px 11px;cursor:pointer;background:transparent;transition:all .25s}
+.qbtn:hover{color:var(--gold);border-color:#c9a96e55}
+.keyrow{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.7;max-width:760px}
+.keyrow code{font-family:var(--mono);background:#0b0b0e;padding:2px 6px;border-radius:5px;color:var(--gold)}
+.banner{background:#101014;border:1px solid var(--bdr);border-radius:12px;padding:14px 18px;margin-bottom:18px;font-size:13px;color:var(--mut);line-height:1.7}
+.banner b{color:var(--ink)}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid #c9a96e44;border-top-color:var(--gold);border-radius:50%;animation:s .7s linear infinite}
+@keyframes s{to{transform:rotate(360deg)}}
+footer{margin-top:40px;font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.1em}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Mission Control</span>
+  <h1>What do I do <em>next?</em></h1>
+  <p class="sub">A standing advisor across every track that matters: the path to a top AI PM role, the LinkedIn build to 20K, the EB1A case, the open-source body of work, learning, and health. The roadmap below always works. The coach chat thinks with you — it runs on your own Claude key, in your browser.</p>
+
+  <div class="tabs">
+    <button class="tab on" data-p="road">Roadmap</button>
+    <button class="tab" data-p="coach">Coach chat</button>
+  </div>
+
+  <!-- ROADMAP -->
+  <section class="panel on" id="road">
+    <div class="banner">Each track shows the <b>one thing to do now</b> and the next few steps. Edit the data block at the bottom of this file to keep it current, or ask the coach to re-prioritize.</div>
+    <div class="tracks" id="tracks"></div>
+  </section>
+
+  <!-- COACH -->
+  <section class="panel" id="coach">
+    <div class="chat-wrap">
+      <div class="chat-head">
+        <span class="t">Your AI PM coach</span>
+        <span style="display:flex;gap:8px;align-items:center">
+          <select id="model" title="Model">
+            <option value="claude-opus-4-8">Opus 4.8 (sharp)</option>
+            <option value="claude-sonnet-4-6">Sonnet 4.6 (cheaper)</option>
+            <option value="claude-fable-5">Fable 5 (max)</option>
+          </select>
+          <input id="key" type="password" placeholder="sk-ant-... (stored in this browser only)" size="22">
+        </span>
+      </div>
+      <div class="msgs" id="msgs">
+        <div class="m sys">Paste your Anthropic API key above to start. It is saved only in this browser (localStorage) and is sent only to api.anthropic.com.</div>
+      </div>
+      <div class="quick" id="quick"></div>
+      <div class="compose">
+        <textarea id="inp" placeholder="Ask: what's the highest-leverage thing I can do this week?"></textarea>
+        <button class="send" id="send">Send</button>
+      </div>
+    </div>
+    <p class="keyrow">Get a key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>. The coach already knows your goals, projects, and cadence (encoded below). It does <b>not</b> know anything financial or personal — keep it that way. Clear the saved key anytime: <code>localStorage.removeItem('mc_key')</code> in the console.</p>
+  </section>
+
+  <footer>MISSION CONTROL · BUILT BY HAND · ROADMAP IS STATIC, COACH USES YOUR KEY CLIENT-SIDE · NOTHING PERSONAL IS COMMITTED</footer>
+</div>
+
+<script>
+/* ───────────── ROADMAP DATA (edit freely) ───────────── */
+const TRACKS=[
+ {icon:"🎯",name:"Top AI PM role",goal:"Staff/Principal PM at Google · Apple · Netflix · OpenAI · Anthropic",
+  now:"Apply to the 1–3 dream-company roles in tonight's Evening Career Brief — manually, with a tailored opener.",
+  steps:[["Senior PM resume done",1],["Evening brief auto-sends weekdays",1],["Apply to dream-co roles same-day",0],["Warm intro for every dream-co application",0],["Mock loop: identity/ads PM cases",0]],
+  metric:"Pipeline: see Evening Career Brief · curated 7/day"},
+ {icon:"📈",name:"LinkedIn → 20K",goal:"9.4K → 20K followers, recognized AI-PM voice",
+  now:"Post today's identity-series entry at 7:40 AM CT, then spend 15 min commenting on 3 target-company PMs.",
+  steps:[["Headline + About rewrite live",0],["3 posts/week (Mon/Wed/Fri)",0],["Finish 15-day identity series",0],["1 carousel/week",0],["Reply to every comment <2h",0]],
+  metric:"Need ~+440/mo to hit 20K by mid-2027"},
+ {icon:"✍️",name:"The Identity Layer (book)",goal:"Weekly Medium essay → compounding body of work + book",
+  now:"Copy this week's published chapter from the repo into Medium (2 min) and pin it.",
+  steps:[["8 chapters written",1],["Weekly auto-publish (Mondays)",1],["Paste each to Medium",0],["Pitch 2 to trade press (AdExchanger/MarTech)",0],["Compile BOOK.md at 15 chapters",0]],
+  metric:"Feeds EB1A authorship + the book"},
+ {icon:"🟢",name:"EB1A case",goal:"Lock 3 criteria now, build 2 over 6 months",
+  now:"Request your promotion letter + comp statements; start the document vault (dossier has the checklist).",
+  steps:[["Dossier + scorecard done",1],["Collect promotion letter + W-2s",0],["2 trade-press placements",0],["1 judging seat + 1 podcast",0],["Line up 5–6 recommenders",0]],
+  metric:"Strong: contributions, role, salary"},
+ {icon:"🛠️",name:"Build in public",goal:"Ship tools that prove PM-who-codes",
+  now:"Let the daily/weekly Actions run; review the US Consumer Pulse once for a post angle.",
+  steps:[["Identity engine, screener, job pipeline",1],["US Consumer Pulse live",1],["Mission Control (this)",1],["YouTube→Shorts pipeline",1],["One new dashboard / month",0]],
+  metric:"9 public repos · all green CI"},
+ {icon:"🎥",name:"Content → reels",goal:"Repurpose YouTube into Shorts/Reels for reach",
+  now:"Drop a YouTube link into the shorts-pipeline queue; it returns a clip plan + captions.",
+  steps:[["Shorts pipeline built",1],["Share a video link to test",0],["Post 3 shorts/week",0],["Cross-post Reels + Shorts",0]],
+  metric:"Quality clips, not volume"},
+ {icon:"💪",name:"Health",goal:"Recomp · train around the Walton 5–6pm crush",
+  now:"Tomorrow is a 5:45 AM lifting day — lay out clothes tonight, lights out by 10.",
+  steps:[["7-day food+gym plan set",1],["Train 5:45 AM or after 7 PM",0],["Sunday meal prep block",0],["9k+ steps on rest days",0]],
+  metric:"Never the 5–6 PM parking crush"},
+ {icon:"🧠",name:"Learn (AI depth)",goal:"Earn the 'AI' in AI PM — build intuition from scratch",
+  now:"Watch one Karpathy 'Zero to Hero' lecture this week; note one idea you can use in a post.",
+  steps:[["Karpathy nn-zero-to-hero (micrograd)",0],["Build a tiny model end-to-end",0],["Write 'what a PM learned building an LLM'",0],["Tie learnings to identity work",0]],
+  metric:"Depth → credibility with eng + recruiters"},
+];
+
+const QUICK=[
+ "What's the single highest-leverage thing I can do this week?",
+ "Draft today's LinkedIn post on identity, no em dashes.",
+ "Which dream-company role should I prioritize and why?",
+ "Give me a 30-minute plan for tonight.",
+ "Prep me for an OpenAI/Anthropic PM interview question.",
+];
+
+/* system prompt — PROFESSIONAL/PUBLIC context only, nothing financial or personal */
+const SYSTEM=`You are Shubham Safaya's personal AI Product Manager coach and chief of staff. Your job: tell him the next concrete step, every step of the way, and push him toward becoming a top AI product manager and a recognized LinkedIn voice.
+
+Who he is (public/professional):
+- Senior Product Manager at Walmart Global Tech (Cloud & Data). Domain: customer identity resolution, customer data platforms, retail-media advertising, ads personalization, data privacy (CPRA/GDPR). Duke MEM. Ex-KPMG.
+- Career goal: Staff/Principal AI PM at Google, Apple, Netflix, OpenAI, or Anthropic.
+- Builds in public: open-source identity-resolution engine, a pre-market stock screener, a curated job pipeline, a daily US Consumer Pulse dashboard, and "The Identity Layer" weekly Medium essay series (becoming a book). GitHub: Shubham-Safaya. Site: shubham-safaya.github.io.
+- Growing LinkedIn from ~9.4K to 20K; running a 15-day identity × advertising × privacy series.
+- Building an EB1A case (authorship, original contributions, critical role).
+- Trains at Walmart's Walton fitness center, avoiding the 5–6 PM crowd; veg-forward diet with chicken and fish.
+
+How to coach:
+- Lead with the answer. Give the ONE next action first, then 2–3 supporting steps. Be specific and time-boxed.
+- Tie advice to his real tracks: career applications, LinkedIn cadence, the book, EB1A, build-in-public, health, and learning AI depth (he's working through Karpathy's material).
+- When he asks for content, write it in his voice: short lines, one idea, end with a question, and NEVER use em dashes (use commas or periods).
+- Be direct and opinionated. Recommend, don't survey. Keep replies tight unless he asks to go deep.
+- You don't have his financial or personal details and shouldn't ask for them.`;
+
+/* ───────────── render roadmap ───────────── */
+document.getElementById('tracks').innerHTML=TRACKS.map(t=>`
+  <div class="track">
+    <h3><span>${t.icon}</span> ${t.name}</h3>
+    <div class="goal">${t.goal}</div>
+    <div class="now"><div class="lbl">Do now</div><div class="txt">${t.now}</div></div>
+    <ul class="steps">${t.steps.map(s=>`<li class="${s[1]?'done':''}">${s[0]}</li>`).join('')}</ul>
+    <div class="metric">${t.metric}</div>
+  </div>`).join('');
+
+/* ───────────── tabs ───────────── */
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');document.getElementById(b.dataset.p).classList.add('on');
+});
+
+/* ───────────── coach chat ───────────── */
+const keyEl=document.getElementById('key'),modelEl=document.getElementById('model'),
+  msgsEl=document.getElementById('msgs'),inp=document.getElementById('inp'),sendBtn=document.getElementById('send');
+keyEl.value=localStorage.getItem('mc_key')||'';
+modelEl.value=localStorage.getItem('mc_model')||'claude-opus-4-8';
+keyEl.onchange=()=>localStorage.setItem('mc_key',keyEl.value.trim());
+modelEl.onchange=()=>localStorage.setItem('mc_model',modelEl.value);
+
+document.getElementById('quick').innerHTML=QUICK.map(q=>`<button class="qbtn">${q}</button>`).join('');
+document.querySelectorAll('.qbtn').forEach((b,i)=>b.onclick=()=>{inp.value=QUICK[i];inp.focus();});
+
+let history=[];
+function bubble(role,text){const d=document.createElement('div');
+  d.className='m '+(role==='user'?'u':role==='assistant'?'a':'sys');
+  d.innerHTML=role==='assistant'?text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>'):text;
+  msgsEl.appendChild(d);msgsEl.scrollTop=msgsEl.scrollHeight;return d;}
+
+async function ask(){
+  const key=keyEl.value.trim();const text=inp.value.trim();
+  if(!key){bubble('sys','Paste your Anthropic API key first (top right).');return;}
+  if(!text)return;
+  inp.value='';sendBtn.disabled=true;
+  bubble('user',text);history.push({role:'user',content:text});
+  const wait=bubble('assistant','<span class="spin"></span>');
+  try{
+    const r=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':key,
+        'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:modelEl.value,max_tokens:1500,system:SYSTEM,messages:history})
+    });
+    const data=await r.json();
+    if(data.type==='error'){wait.innerHTML='⚠️ '+(data.error?.message||'API error');history.pop();}
+    else if(data.stop_reason==='refusal'){wait.innerHTML='The model declined that request. Try rephrasing.';history.pop();}
+    else{const txt=(data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('\n').trim()||'(no text)';
+      wait.innerHTML=txt.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+      history.push({role:'assistant',content:txt});}
+  }catch(e){wait.innerHTML='⚠️ Network error: '+e.message+' (a browser extension or ad-blocker can block api.anthropic.com)';history.pop();}
+  sendBtn.disabled=false;inp.focus();
+}
+sendBtn.onclick=ask;
+inp.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();ask();}});
+</script>
+</body>
+</html>
