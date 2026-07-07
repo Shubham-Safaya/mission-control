@@ -1,0 +1,6 @@
+{
+  "linkedin_start_day": 31,
+  "_note": "SET ME: your actual next Day number from your last LinkedIn post. Bank slots day-001..day-090 are published as Day (start_day + slot - 1).",
+  "post_days": ["Mon", "Wed", "Fri"],
+  "post_time_ct": "07:40"
+}
