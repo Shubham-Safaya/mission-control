@@ -1,0 +1,25 @@
+name: Daily email — dispatch
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 6:00 AM Central during DST
+    # - cron: "0 12 * * *" # UNCOMMENT after November DST change to keep 6:00 AM CT
+  workflow_dispatch: {}
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: prep
+        run: |
+          echo "subject=$(cat data/today/subject.txt)" >> "$GITHUB_OUTPUT"
+          test -s data/today/email.html
+      - uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_APP_PASSWORD }}
+          subject: ${{ steps.prep.outputs.subject }}
+          to: ${{ secrets.MAIL_TO }}
+          from: Mission Control <${{ secrets.MAIL_USERNAME }}>
+          html_body: file://data/today/email.html

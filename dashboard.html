@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mission Control — dashboard</title>
+<style>
+body{font-family:-apple-system,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:20px;color:#1b1d21;background:#fafaf7}
+h1{font-size:1.4rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:16px 0}
+.card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:14px}
+.num{font-size:1.6rem;font-weight:700}.lbl{font-size:.7rem;text-transform:uppercase;color:#888;letter-spacing:.06em}
+.warn{color:#b45309;font-weight:700}ul{padding-left:18px;font-size:.9rem}
+a{color:#1d4ed8}footer{font-size:.75rem;color:#888;margin-top:24px}
+</style></head><body>
+<h1>Mission Control</h1>
+<div class="grid" id="grid">loading…</div>
+<h2 style="font-size:1.05rem">Today's tasks</h2><ul id="tasks"></ul>
+<h2 style="font-size:1.05rem">All properties</h2><ul id="props"></ul>
+<footer>Data: engine state + asset registry, refreshed by the daily Actions. <a href="https://github.com/Shubham-Safaya/mission-control">source</a></footer>
+<script>
+const R = "https://raw.githubusercontent.com/Shubham-Safaya/mission-control/main/";
+async function j(p){ return (await fetch(R+p)).json(); }
+(async () => {
+  const [s, reg] = await Promise.all([j("data/today/status.json").catch(()=>({})), j("data/asset-registry.json").catch(()=>({assets:[]}))]);
+  const used = 90 - (s.bank_left ?? 90);
+  // refill-by estimate: 3 posts/week
+  const weeksLeft = Math.floor((s.bank_left ?? 90) / 3);
+  const refill = new Date(Date.now() + weeksLeft*7*86400e3).toISOString().slice(0,10);
+  document.getElementById("grid").innerHTML = `
+    <div class="card"><div class="num">${s.streak ?? "—"}</div><div class="lbl">streak</div></div>
+    <div class="card"><div class="num">${s.bank_left ?? "—"}/90</div><div class="lbl">bank remaining</div></div>
+    <div class="card"><div class="num ${ (s.bank_left??90) <= 15 ? "warn":""}">${refill}</div><div class="lbl">refill needed by</div></div>
+    <div class="card"><div class="num">${s.light_mode ? "LIGHT" : "FULL"}</div><div class="lbl">mode</div></div>`;
+  document.getElementById("tasks").innerHTML = (s.tasks||[]).map(t=>`<li>${t}</li>`).join("") || "<li>—</li>";
+  document.getElementById("props").innerHTML = (reg.assets||[]).filter(a=>a.pages_url)
+    .map(a=>`<li><a href="${a.pages_url}">${a.repo}</a> — ${a.purpose.split(".")[0]}</li>`).join("");
+})();
+</script></body></html>

@@ -1,0 +1,22 @@
+name: Daily email — assemble
+on:
+  schedule:
+    - cron: "45 10 * * *"   # 5:45 AM CT during DST
+    # - cron: "45 11 * * *" # UNCOMMENT after November DST change to keep 5:45 AM CT
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python scripts/assemble.py
+      - run: |
+          git config user.name "mission-control"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "engine: daily assembly $(date -u +%F) [skip ci]"
+          git push
