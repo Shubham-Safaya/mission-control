@@ -1,0 +1,204 @@
+{
+  "generated": "2026-07-07",
+  "note": "Single source of truth for portfolio + mission-control. job-hunter-v2 in the sprint spec maps to job-search-pipeline.",
+  "assets": [
+    {
+      "repo": "shubham-safaya.github.io",
+      "purpose": "Portfolio hub (P0 rebuild target)",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-06-15",
+      "pages_url": "https://shubham-safaya.github.io/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "mission-control",
+      "purpose": "Roadmap + client-side Claude coach -> becomes the daily engine (P0)",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-06-13",
+      "pages_url": "https://shubham-safaya.github.io/mission-control/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "live",
+      "purpose": "Auto-updating public directory of all properties + nightly healthcheck DAG",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": "https://shubham-safaya.github.io/live/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "us-consumer-pulse",
+      "purpose": "Daily US consumer dashboard (BLS/Census) -> audience intelligence platform (P1)",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-07-07",
+      "pages_url": "https://shubham-safaya.github.io/us-consumer-pulse/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "job-search-dashboard",
+      "purpose": "Public analytics for the job pipeline (Chart.js/Leaflet) -> v3 (P1)",
+      "stack": "JavaScript",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": "https://shubham-safaya.github.io/job-search-dashboard/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "job-search-pipeline",
+      "purpose": "PRIVATE job system (scrapers, scorer, hm_finder, outreach, evening brief). NOTE: spec's 'job-hunter-v2' = this repo",
+      "stack": "Python",
+      "visibility": "private",
+      "last_push": "2026-07-06",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "kongposh",
+      "purpose": "Kashmir saffron pre-launch + verify/batch provenance -> heritage house expansion (P2). KNOWN RISK: name collides with existing saffron brands (kongposhsaffron.com, kongposh.co.in) - flagged 2026-07-06",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-07-05",
+      "pages_url": "https://shubham-safaya.github.io/kongposh/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "threadpass",
+      "purpose": "Textile export compliance one-pager (DPP/UFLPA), verified citations",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": "https://shubham-safaya.github.io/threadpass/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "sundays-with-safaya",
+      "purpose": "SWS brand hub + email capture, live Sunday cadence device",
+      "stack": "HTML",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": "https://shubham-safaya.github.io/sundays-with-safaya/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "evenout",
+      "purpose": "INFERRED (per spec 2): Splitwise-style expense splitting PWA - Supabase RPC backend (capability URLs), v3.3: % splits, categories, charts, edit, owner-only stats. Real friend group using it",
+      "stack": "PLpgSQL",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": "https://shubham-safaya.github.io/evenout/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "checkpoint",
+      "purpose": "INFERRED (per spec 2): pathway navigator for Indians going abroad - wizard, rules engine R1-R15 w/ flip conditions, travel finder (20 verified), EB1A tracker, colleges, housing. Vite+React+TS",
+      "stack": "TypeScript",
+      "visibility": "public",
+      "last_push": "2026-07-07",
+      "pages_url": "https://shubham-safaya.github.io/checkpoint/",
+      "pages_status": 200,
+      "broken": false
+    },
+    {
+      "repo": "daily-engineering-log",
+      "purpose": "Daily log + The Identity Layer weekly book engine (BOOK.md, 8 chapters)",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-07-07",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "yt-shorts-studio",
+      "purpose": "YouTube->Shorts planner (Actions) -> v2 local factory (P2)",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-06-30",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "identity-resolution-engine",
+      "purpose": "Flagship OSS on PyPI - deterministic+probabilistic matching, identity graphs. EB1A original-contribution anchor",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-06-06",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "data-quality-monitor",
+      "purpose": "Python DQ checks lib, zero-dep",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-06-04",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "productivity-toolkit",
+      "purpose": "7 Claude-API CLI tools (fable5 migration done) + marketing sites source",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-07-06",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "competitive-programming",
+      "purpose": "CP solutions organized by topic",
+      "stack": "Python",
+      "visibility": "public",
+      "last_push": "2026-06-04",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "accessibility-alarm",
+      "purpose": "Multi-sensory alarm PWA, WCAG AA",
+      "stack": "JavaScript",
+      "visibility": "public",
+      "last_push": "2026-06-04",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    },
+    {
+      "repo": "stock-screener",
+      "purpose": "PRIVATE premarket brief w/ real holdings - excluded from public surfaces",
+      "stack": "Python",
+      "visibility": "private",
+      "last_push": "2026-06-12",
+      "pages_url": null,
+      "pages_status": null,
+      "broken": false
+    }
+  ],
+  "external_profiles": {
+    "medium": "https://medium.com/@safayashubham",
+    "youtube": "https://www.youtube.com/@sundayswithsafaya",
+    "linkedin": "https://www.linkedin.com/in/shubham-safaya",
+    "instagram": "https://www.instagram.com/sundays_with_safaya",
+    "x": "https://x.com/ShubhamSafaya",
+    "topmate": "https://topmate.io/sundays_with_safaya"
+  }
+}
