@@ -1,0 +1,13 @@
+{
+  "_format": "ranges of YYYY-MM-DD inclusive; email switches to light mode (post only, no tasks) inside them",
+  "ranges": [
+    {
+      "start": "2026-09-08",
+      "end": "2026-09-12"
+    },
+    {
+      "start": "2026-12-20",
+      "end": "2026-12-31"
+    }
+  ]
+}

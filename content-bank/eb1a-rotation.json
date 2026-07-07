@@ -1,0 +1,37 @@
+{
+  "rotation": [
+    {
+      "week": 1,
+      "task": "Submit the newest Medium draft to one publication (Better Programming/UX Collective-style targets list in eb1a/evidence-tracker.md)"
+    },
+    {
+      "week": 2,
+      "task": "Log this month's Topmate mentorship sessions (count + topics) into the judging evidence log"
+    },
+    {
+      "week": 3,
+      "task": "Update mission-control/eb1a/evidence-tracker.md \u2014 one row per new artifact this month"
+    },
+    {
+      "week": 4,
+      "task": "Find one conference CFP in identity/adtech/data (MAU, Programmatic IO, PyData) and draft a 3-line abstract"
+    },
+    {
+      "week": 5,
+      "task": "Pitch one journalist/newsletter (AdExchanger, MarTech.org, Import AI-style) with the synthetic-population demo"
+    },
+    {
+      "week": 6,
+      "task": "Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed"
+    },
+    {
+      "week": 7,
+      "task": "Ask one senior colleague/mentee for a dated LinkedIn recommendation referencing specific work"
+    },
+    {
+      "week": 8,
+      "task": "File APAN ARG Vice Chair progress note (role = leading/critical role criterion)"
+    }
+  ],
+  "note": "Assembler picks rotation[week_number % 8] each Monday."
+}
