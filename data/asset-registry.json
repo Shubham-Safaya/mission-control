@@ -191,6 +191,16 @@
       "pages_url": null,
       "pages_status": null,
       "broken": false
+    },
+    {
+      "repo": "bharat-consumer-pulse",
+      "purpose": "India twin of us-consumer-pulse (P2, spec 8): persona builder on Census 2011/NCP/NFHS-5, mobile-first synthetic identity graph (phone-hash key), DPDP explainer, monthly CPI/TRAI pulse",
+      "stack": "HTML/JS + Python",
+      "visibility": "public",
+      "last_push": "2026-07-07",
+      "pages_url": "https://shubham-safaya.github.io/bharat-consumer-pulse/",
+      "pages_status": 200,
+      "broken": false
     }
   ],
   "external_profiles": {
