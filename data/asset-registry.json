@@ -63,12 +63,14 @@
       "broken": false
     },
     {
-      "repo": "kongposh",
-      "purpose": "Kashmir saffron pre-launch + verify/batch provenance -> heritage house expansion (P2). KNOWN RISK: name collides with existing saffron brands (kongposhsaffron.com, kongposh.co.in) - flagged 2026-07-06",
+      "repo": "kesarkong",
+      "purpose": [
+        "KesarKong (renamed from kongposh 2026-07-08 \u2014 resolves saffron-brand trademark collision): Kashmir saffron + verify/batch provenance flow. Heritage-house expansion (spec 9) still available."
+      ],
       "stack": "HTML",
       "visibility": "public",
       "last_push": "2026-07-05",
-      "pages_url": "https://shubham-safaya.github.io/kongposh/",
+      "pages_url": "https://shubham-safaya.github.io/kesarkong/",
       "pages_status": 200,
       "broken": false
     },
