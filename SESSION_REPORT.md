@@ -37,7 +37,13 @@
 - The channel RSS shows vlogs + 2 Hidden Voice episodes + 1 interview (Anshul Pandita) as the 15 newest — if the 35+ interview episodes live on a different channel/handle, update the channel ID in `portfolio scripts/refresh.py` + reel plans.
 - Kong Posh name collision (kongposhsaffron.com, kongposh.co.in — same category) remains flagged from 2026-07-06; the P2 expansion below should confirm the name decision first.
 
-## DEFERRED — 5 items shipped in continuation; 3 genuinely blocked remain
+
+### Continuation 2 (2026-07-08)
+13. **6 AM email — DIAGNOSED + hardened.** It failed because NO mail secrets were set (the pending checklist step, not a bug — the assembler built Day 31 + 3 tasks + streak 2 perfectly). Fix pushed: `MAIL_TO` now defaults to `MAIL_USERNAME` (only 2 secrets needed) and a preflight prints a human instruction. **ACTION: set MAIL_USERNAME + MAIL_APP_PASSWORD, then Run the dispatch workflow to test.**
+14. **KesarKong — Kong Posh renamed (name decision made).** Resolves the saffron-brand trademark collision. Repo kongposh→kesarkong, site rebranded (BRAND_NAME const + etymology line + all copy), Pages live at /kesarkong/, cross-links updated (portfolio, live healthcheck, registry). The heritage-house EXPANSION (spec §9) is now unblocked and buildable on request.
+15. **Job dashboard v3 (6a, public side).** Daily history-snapshot workflow + manifest makes source attribution permanent ("where were the old jobs found" — answerable forever); source-over-time stacked chart + status-aware funnel panel. The per-posting status data model stays the one private-repo piece.
+
+## DEFERRED — 8 items shipped in continuation; remaining:
 Everything buildable is done. The three below need something only you (or a
 separate session) can unblock:
 | Item | Why deferred | The plan |
