@@ -44,7 +44,17 @@
 14. **KesarKong — Kong Posh renamed (name decision made).** Resolves the saffron-brand trademark collision. Repo kongposh→kesarkong, site rebranded (BRAND_NAME const + etymology line + all copy), Pages live at /kesarkong/, cross-links updated (portfolio, live healthcheck, registry). The heritage-house EXPANSION (spec §9) is now unblocked and buildable on request.
 15. **Job dashboard v3 (6a, public side).** Daily history-snapshot workflow + manifest makes source attribution permanent ("where were the old jobs found" — answerable forever); source-over-time stacked chart + status-aware funnel panel. The per-posting status data model stays the one private-repo piece.
 
-## DEFERRED — 8 items shipped in continuation; remaining:
+### Continuation 3 (2026-07-08, later) — distribution & verification
+17. **Live directory refreshed** (`live/index.html`). Two new sections — **Products & apps** (EvenOut, Checkpoint) and **Ventures** (KesarKong, ThreadPass, new "Pre-launch" badge); **Bharat Consumer Pulse** added to dashboards; US Consumer Pulse rewritten to the audience-intelligence platform; YouTube→Shorts Studio upgraded to v2 (Pages command-builder). Live last-updated stamps still pull from GitHub.
+18. **Press kit refreshed** (`press-kit/index.html`). Project one-liners expanded 5→9 (added Bharat Pulse, KesarKong, ThreadPass, yt-shorts-studio; expanded US Pulse/Checkpoint/EvenOut; identity-engine noted as powering the demos); new "Everything, live" pointer to the live directory.
+19. **Portfolio hub verified + a real leak closed.** Confirmed all 10 public Pages sites + press-kit are linked from the hub and resolve 200. **Removed `stock-screener` from the flagship grid** — it was a clickable card that 404'd for every visitor and exposed a private repo (violating the badge-only rule); scanned for `job-search-pipeline` too — clean. Flagship grid now leads with the new work; yt-shorts card → Pages.
+20. **Healthcheck expanded 10→16 URLs and run GREEN.** Now watches the whole estate incl. Checkpoint, Bharat Pulse, KesarKong /shop, yt-shorts, press-kit, plus the EvenOut DB round-trip. Nightly self-managing issue on failure; confirmed **success, zero open issues** on demand.
+
+## DEFERRED — everything buildable shipped; only these remain, all externally blocked:
+*(the two truly-blocked items — neither is buildable without you or a private-repo session)*
+- **Job pipeline per-posting status model (6a)** — lives in the private `job-search-pipeline` repo; the public dashboard already renders source/funnel when the pipeline emits it. Needs a session pointed at that repo.
+- **Portfolio Lighthouse ≥95** — needs a real browser audit to measure and fix; the site is static so it's likely close.
+
 Everything buildable is done. The three below need something only you (or a
 separate session) can unblock:
 | Item | Why deferred | The plan |
