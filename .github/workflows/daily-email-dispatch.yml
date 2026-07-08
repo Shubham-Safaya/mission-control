@@ -11,6 +11,11 @@ jobs:
       - uses: actions/checkout@v4
       - id: prep
         run: |
+          # Fail early with a HUMAN message if the mail secrets aren't set yet.
+          if [ -z "${{ secrets.MAIL_USERNAME }}" ] || [ -z "${{ secrets.MAIL_APP_PASSWORD }}" ]; then
+            echo "::error::Mail secrets not set. Add MAIL_USERNAME and MAIL_APP_PASSWORD (and optionally MAIL_TO) in repo Settings → Secrets → Actions. See SETUP_CHECKLIST.md §2."
+            exit 1
+          fi
           echo "subject=$(cat data/today/subject.txt)" >> "$GITHUB_OUTPUT"
           test -s data/today/email.html
       - uses: dawidd6/action-send-mail@v3
@@ -20,6 +25,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_APP_PASSWORD }}
           subject: ${{ steps.prep.outputs.subject }}
-          to: ${{ secrets.MAIL_TO }}
+          # MAIL_TO falls back to MAIL_USERNAME — set only 2 secrets to go live.
+          to: ${{ secrets.MAIL_TO || secrets.MAIL_USERNAME }}
           from: Mission Control <${{ secrets.MAIL_USERNAME }}>
           html_body: file://data/today/email.html

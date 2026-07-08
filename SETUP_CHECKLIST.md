@@ -14,6 +14,13 @@ runs itself.*
 - [ ] **YouTube Data API key** — console.cloud.google.com → new project → enable "YouTube Data API v3" → credentials → API key
 - [ ] **Gmail app password** — myaccount.google.com/apppasswords (requires 2FA on). Name it "mission-control". 16-char password, save it once.
 
+## ⚠️ WHY THE 6 AM EMAIL FAILED (2026-07-08)
+The dispatch job errored `At least one of 'to' … must be specified` — because
+**no mail secrets are set yet**. This is the pending checklist step, not a bug.
+Set the two secrets below and the email works (MAIL_TO now defaults to
+MAIL_USERNAME, so 2 secrets are enough). Then Actions → "Daily email — dispatch"
+→ Run workflow to test immediately.
+
 ## 2. Repo secrets to set (Settings → Secrets and variables → Actions)
 | Repo | Secret | Value |
 |---|---|---|
