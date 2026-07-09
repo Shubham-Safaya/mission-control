@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "bank_left": 89,
-  "streak": 2,
+  "streak": 3,
   "light_mode": false,
-  "post": "Day 31",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Pitch one journalist/newsletter (AdExchanger, MarTech.org, Import AI-style) with the synthetic-population demo",
-    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
+    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
   ]
 }
