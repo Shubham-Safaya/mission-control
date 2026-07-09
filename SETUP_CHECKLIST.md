@@ -3,10 +3,10 @@
 *Grows during the session. Everything here is one-time; after this the machine
 runs itself.*
 
-## 0. PyPI publish (fixes an honesty gap — the package is NOT live yet)
+## 0. PyPI publish — ✅ DONE 2026-07-08 (identity-resolver 0.1.0 live)
 - [ ] Create account + API token at pypi.org
 - [ ] `cd identity-resolution-engine && python3 -m pip install build twine && python3 -m build && python3 -m twine upload dist/*`
-- [ ] Verify: https://pypi.org/project/identity-resolver/ → portfolio stat goes live next refresh
+- [x] DONE — https://pypi.org/project/identity-resolver/0.1.0/ live; pip install verified; portfolio stat lights up next refresh
 
 ## 1. Free API keys to request (all instant)
 - [ ] **Census API key** — https://api.census.gov/data/key_signup.html (email arrives in minutes)

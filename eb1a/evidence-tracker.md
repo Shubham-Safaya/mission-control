@@ -3,7 +3,7 @@
 
 | Criterion | Asset | Status | Evidence / next step |
 |---|---|---|---|
-| **Original contributions** | identity-resolution-engine (OSS) | Building | PUBLISH TO PyPI TONIGHT (not yet live — checklist §0); then pypistats history auto-logs on portfolio |
+| **Original contributions** | identity-resolution-engine (OSS) | Building | LIVE on PyPI (pip install identity-resolver, published 2026-07-08); pypistats download history now auto-logs on the portfolio |
 | Original contributions | US Consumer Pulse persona builder + synthetic graph demo | Building | Persona builder live; synthetic-graph demo is the flagship piece (SESSION_REPORT plan) |
 | Original contributions | The Identity Layer (book, 8 chapters) | Building | Weekly essay engine running; compile at ~20 chapters |
 | **Authorship** | Medium archive (@safayashubham) | Building | Auto-listed on portfolio via RSS. 3 full drafts banked; publish weekly, then pitch republication |
