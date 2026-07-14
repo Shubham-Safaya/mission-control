@@ -1,53 +1,7 @@
 <!doctype html><html><body style="font-family:-apple-system,Segoe UI,sans-serif;max-width:640px;margin:0 auto;color:#1b1d21">
-<h1 style="font-size:20px">Good morning, Shubham. <span style="font-size:12px;color:#888">Monday, Jul 13 · streak 7</span></h1>
+<h1 style="font-size:20px">Good morning, Shubham. <span style="font-size:12px;color:#888">Tuesday, Jul 14 · streak 8</span></h1>
+<p style='color:#666'>No post today (cadence Mon/Wed/Fri). Engage: 10 minutes of comments on target-company PM posts.</p>
+<h2 style="margin:18px 0 6px">Today (60–90 min)</h2><ul style="padding-left:18px;font-size:14px"><li style='margin:6px 0'>Job: 30 fresh matches — top: The Trade Desk · Principal Product Manager, Pharma → apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/</li><li style='margin:6px 0'>EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed</li><li style='margin:6px 0'>Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line</li></ul>
 
-    <h2 style="margin:18px 0 6px">Today: LinkedIn Day 33</h2>
-    <div style="background:#f6f6f2;border:1px solid #ddd;border-radius:8px;padding:14px;white-space:pre-wrap;font-size:14px">Day 33.
-
-Deterministic versus probabilistic matching is presented as a religious war. In practice it is a budget question.
-
-Deterministic matching says: same normalized email or phone, same person. Cheap, fast, defensible in an audit, and blind to every customer who did not hand you the same identifier twice.
-
-Probabilistic matching says: this name, this postal geography, this device pattern look alike, so with some confidence these records are one household. It finds the customers determinism misses, and every match carries a probability you must be willing to defend.
-
-The systems that work run both, in order. Exact keys first, because certainty is free when you have it. Fuzzy second, gated by a threshold someone senior has actually signed off on, because that threshold is a business decision wearing a math costume.
-
-The threshold is where the product manager earns the title. Set it in a meeting, not in a config file nobody reviews.</div>
-    <p style="font-size:12px;color:#666">Hashtag options: #IdentityResolution #RetailMedia #CustomerData · #AdTech #CDP #MarTech · #DataStrategy #ProductManagement #Privacy — post at 7:40 AM CT.</p>
-<h2 style="margin:18px 0 6px">Today (60–90 min)</h2><ul style="padding-left:18px;font-size:14px"><li style='margin:6px 0'>Job: 30 fresh matches — top: The Trade Desk · Principal Product Manager, Pharma → apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/</li><li style='margin:6px 0'>EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed</li><li style='margin:6px 0'>Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues</li></ul>
-<h2>This week's Medium (DRAFT)</h2><div style='background:#f6f6f2;border-radius:8px;padding:12px;white-space:pre-wrap;font-size:13px'># Week 03: I Built a Synthetic Population So I Could Stop Guessing
-
-**Status: FULL DRAFT — polish and publish**
-
-The hardest problem in identity resolution is not matching. It is grading. You can compute a match rate on production data, but you cannot compute precision, because you do not know the truth. Nobody labeled reality for you.
-
-This is the quiet reason the industry argues in adjectives. Vendors claim high accuracy; buyers cannot verify; everyone settles for match rate, which is the recall half of a two-number story. After years of this, I did the only thing that produces truth you can ethically own: I manufactured it.
-
-## The recipe
-
-I generated a synthetic population of roughly one hundred thousand people using public Census distributions: age by sex, household size and structure, geography, income brackets. Statistically faithful at the aggregate level, entirely fabricated at the individual level. No real person, no licensed record, nothing to leak.
-
-Each synthetic person got a persistent ID, a household assignment, and a set of identifiers with realistic imperfections: emails with plus-tags and typos, phones in mixed formats, names with nicknames, transliteration variants, and the occasional marriage-driven surname change. Each household got shared devices and a shared address rendered in multiple inconsistent styles, because that is what addresses do.
-
-Then the crucial step: I fragmented the population into overlapping record sets, the way real enterprises hold customers across systems, and kept the answer key. Which records belong to which person is known, because I decided it.
-
-## What the simulator caught
-
-Running my own open-source matching engine against this population was humbling within the hour.
-
-The engine over-merged young adults living with their parents: same surname, same address, close ages. Real systems make this mistake at scale and never know, because production has no answer key. My precision on that segment was visibly worse than the headline number, and the headline number was itself the average hiding it.
-
-It under-matched women across surname changes, which I knew abstractly and had never quantified. The recall gap was large enough to matter for any lifecycle marketing use case, and it was invisible in aggregate metrics.
-
-And transitive closure did what transitive closure does: one operationally-corrupted identifier, planted deliberately, assembled a mega-cluster with the enthusiasm of a conspiracy theorist. Frequency caps on identifier reuse fixed it, and the fix now exists because the simulator made the failure observable.
-
-## Why this matters beyond my weekend
-
-Every claim in the identity industry becomes testable the moment ground truth exists. A vendor pitch says 90 percent accuracy: run their matcher on a synthetic benchmark and read the actual precision curve. A threshold change is proposed: rerun the benchmark and watch which segments pay. A new normalizer ships: the answer key says instantly whether it helped.
-
-The benchmark also travels. Because the population is synthetic, I can publish it, write about it, and demonstrate the full mechanics of identity resolution in public without a single privacy question. The machinery that commercial identity companies operate at scale on licensed data can be demonstrated honestly on manufactured people, and the demonstration is legally boring in the best way.
-
-A flight simulator does not replace flying. It replaces crashing during training. Every identity team should keep one in the drawer, and no team should accept an accuracy claim from anyone who cannot show you theirs.
-</div>
 <p style="font-size:12px;color:#666">Auto-completed overnight: pulse refreshed, jobs indexed, portfolio stats updated, healthcheck ran.<br>Bank: 87 posts left · <a href="https://shubham-safaya.github.io/mission-control/dashboard.html">dashboard</a></p>
 </body></html>
