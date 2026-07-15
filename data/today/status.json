@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-14",
-  "bank_left": 87,
-  "streak": 8,
+  "date": "2026-07-15",
+  "bank_left": 86,
+  "streak": 9,
   "light_mode": false,
-  "post": null,
+  "post": "Day 34",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed",
-    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
+    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
   ]
 }
