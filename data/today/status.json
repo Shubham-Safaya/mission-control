@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-16",
-  "bank_left": 86,
-  "streak": 10,
+  "date": "2026-07-17",
+  "bank_left": 85,
+  "streak": 11,
   "light_mode": false,
-  "post": null,
+  "post": "Day 35",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
