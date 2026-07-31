@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-30",
-  "bank_left": 80,
-  "streak": 24,
+  "date": "2026-07-31",
+  "bank_left": 79,
+  "streak": 25,
   "light_mode": false,
-  "post": null,
+  "post": "Day 41",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: File APAN ARG Vice Chair progress note (role = leading/critical role criterion)",
-    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
+    "Build: Review the portfolio stats strip renders today's date"
   ]
 }
