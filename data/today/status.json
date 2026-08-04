@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-03",
+  "date": "2026-08-04",
   "bank_left": 78,
-  "streak": 28,
+  "streak": 29,
   "light_mode": false,
-  "post": "Day 42",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Submit the newest Medium draft to one publication (Better Programming/UX Collective-style targets list in eb1a/evidence-tracker.md)",
-    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
+    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
   ]
 }
