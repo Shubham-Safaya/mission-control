@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-10",
+  "date": "2026-08-11",
   "bank_left": 75,
-  "streak": 35,
+  "streak": 36,
   "light_mode": false,
-  "post": "Day 45",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Log this month's Topmate mentorship sessions (count + topics) into the judging evidence log",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
