@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "bank_left": 71,
-  "streak": 44,
+  "streak": 45,
   "light_mode": false,
-  "post": "Day 49",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Update mission-control/eb1a/evidence-tracker.md \u2014 one row per new artifact this month",
-    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
+    "Build: Review the portfolio stats strip renders today's date"
   ]
 }
