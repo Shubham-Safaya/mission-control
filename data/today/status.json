@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-25",
-  "bank_left": 69,
-  "streak": 50,
+  "date": "2026-08-26",
+  "bank_left": 68,
+  "streak": 51,
   "light_mode": false,
-  "post": null,
+  "post": "Day 52",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Principal Product Manager, Pharma \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Find one conference CFP in identity/adtech/data (MAU, Programmatic IO, PyData) and draft a 3-line abstract",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
