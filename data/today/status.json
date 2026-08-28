@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-27",
-  "bank_left": 68,
-  "streak": 52,
+  "date": "2026-08-28",
+  "bank_left": 67,
+  "streak": 53,
   "light_mode": false,
-  "post": null,
+  "post": "Day 53",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Cloudflare \u00b7 Senior Product Manager - Ad Fraud and Identity Solutions \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Find one conference CFP in identity/adtech/data (MAU, Programmatic IO, PyData) and draft a 3-line abstract",
-    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
+    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
   ]
 }
