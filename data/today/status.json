@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-05",
   "bank_left": 64,
-  "streak": 60,
+  "streak": 61,
   "light_mode": false,
-  "post": "Day 56",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Cloudflare \u00b7 Senior Product Manager - Ad Fraud and Identity Solutions \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Pitch one journalist/newsletter (AdExchanger, MarTech.org, Import AI-style) with the synthetic-population demo",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
