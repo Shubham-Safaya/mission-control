@@ -2,7 +2,5 @@
   "date": "2026-09-08",
   "bank_left": 63,
   "streak": 64,
-  "light_mode": true,
-  "post": null,
-  "tasks": []
+  "light": true
 }
