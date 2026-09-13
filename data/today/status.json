@@ -1,8 +1,12 @@
 {
-  "date": "2026-09-12",
+  "date": "2026-09-13",
   "bank_left": 61,
-  "streak": 68,
-  "light_mode": true,
+  "streak": 69,
+  "light_mode": false,
   "post": null,
-  "tasks": []
+  "tasks": [
+    "Job: 30 fresh matches \u2014 top: Instacart \u00b7 Senior Product Manager, Advertiser Experience \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
+    "EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed",
+    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
+  ]
 }
