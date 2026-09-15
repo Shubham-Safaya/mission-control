@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-14",
+  "date": "2026-09-15",
   "bank_left": 60,
-  "streak": 70,
+  "streak": 71,
   "light_mode": false,
-  "post": "Day 60",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Instacart \u00b7 Senior Product Manager, Advertiser Experience \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Ask one senior colleague/mentee for a dated LinkedIn recommendation referencing specific work",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
