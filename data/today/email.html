@@ -1,7 +1,20 @@
 <!doctype html><html><body style="font-family:-apple-system,Segoe UI,sans-serif;max-width:640px;margin:0 auto;color:#1b1d21">
-<h1 style="font-size:20px">Good morning, Shubham. <span style="font-size:12px;color:#888">Thursday, Sep 17 · streak 73</span></h1>
-<p style='color:#666'>No post today (cadence Mon/Wed/Fri). Engage: 10 minutes of comments on target-company PM posts.</p>
-<h2 style="margin:18px 0 6px">Today (60–90 min)</h2><ul style="padding-left:18px;font-size:14px"><li style='margin:6px 0'>Job: 30 fresh matches — top: Instacart · Senior Product Manager, Advertiser Experience → apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/</li><li style='margin:6px 0'>EB1A: Ask one senior colleague/mentee for a dated LinkedIn recommendation referencing specific work</li><li style='margin:6px 0'>Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line</li></ul>
+<h1 style="font-size:20px">Good morning, Shubham. <span style="font-size:12px;color:#888">Friday, Sep 18 · streak 74</span></h1>
 
-<p style="font-size:12px;color:#666">Auto-completed overnight: pulse refreshed, jobs indexed, portfolio stats updated, healthcheck ran.<br>Bank: 59 posts left · <a href="https://shubham-safaya.github.io/mission-control/dashboard.html">dashboard</a></p>
+    <h2 style="margin:18px 0 6px">Today: LinkedIn Day 62</h2>
+    <div style="background:#f6f6f2;border:1px solid #ddd;border-radius:8px;padding:14px;white-space:pre-wrap;font-size:14px">Day 62.
+
+Everyone wants to talk about identity graphs. Nobody wants to talk about identity graph deletion, which is where the actual engineering lives.
+
+Deleting a person from a graph is not deleting a row. Their identifiers thread through merge history, derived audiences, vendor syncs, measurement panels, and backups. True deletion means unwinding a person from a data structure that was specifically built to make people hard to lose.
+
+The pattern that works: treat deletion as a first-class graph operation with its own ledger. Resolve the request to the full identity cluster first, then propagate erasure outward with confirmations logged per system, then tombstone the identifiers so re-ingestion from a stale vendor file cannot resurrect the person next Tuesday.
+
+Resurrection is the failure mode nobody budgets for. A deleted customer who reappears via a quarterly enrichment file is a regulatory finding with a timestamp.
+
+If your deletion design has no tombstones, it is not deletion. It is a nap.</div>
+    <p style="font-size:12px;color:#666">Hashtag options: #IdentityResolution #RetailMedia #CustomerData · #AdTech #CDP #MarTech · #DataStrategy #ProductManagement #Privacy — post at 7:40 AM CT.</p>
+<h2 style="margin:18px 0 6px">Today (60–90 min)</h2><ul style="padding-left:18px;font-size:14px"><li style='margin:6px 0'>Job: 30 fresh matches — top: Instacart · Senior Product Manager, Advertiser Experience → apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/</li><li style='margin:6px 0'>EB1A: Ask one senior colleague/mentee for a dated LinkedIn recommendation referencing specific work</li><li style='margin:6px 0'>Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)</li></ul>
+
+<p style="font-size:12px;color:#666">Auto-completed overnight: pulse refreshed, jobs indexed, portfolio stats updated, healthcheck ran.<br>Bank: 58 posts left · <a href="https://shubham-safaya.github.io/mission-control/dashboard.html">dashboard</a></p>
 </body></html>
