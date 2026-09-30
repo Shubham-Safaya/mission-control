@@ -1,12 +1,12 @@
 {
-  "date": "2026-09-29",
-  "bank_left": 54,
-  "streak": 85,
+  "date": "2026-09-30",
+  "bank_left": 53,
+  "streak": 86,
   "light_mode": false,
-  "post": null,
+  "post": "Day 67",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Instacart \u00b7 Senior Product Manager, Advertiser Experience \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Submit the newest Medium draft to one publication (Better Programming/UX Collective-style targets list in eb1a/evidence-tracker.md)",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
