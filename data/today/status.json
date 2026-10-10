@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-09",
+  "date": "2026-10-10",
   "bank_left": 49,
-  "streak": 95,
+  "streak": 96,
   "light_mode": false,
-  "post": "Day 71",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Staff Product Manager, Audience Products \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Log this month's Topmate mentorship sessions (count + topics) into the judging evidence log",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
