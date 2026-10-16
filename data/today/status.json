@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-15",
-  "bank_left": 47,
-  "streak": 101,
+  "date": "2026-10-16",
+  "bank_left": 46,
+  "streak": 102,
   "light_mode": false,
-  "post": null,
+  "post": "Day 74",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: The Trade Desk \u00b7 Staff Product Manager, Audience Products \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Update mission-control/eb1a/evidence-tracker.md \u2014 one row per new artifact this month",
-    "Build: Trim one stale item from mission-control dashboard"
+    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
   ]
 }
