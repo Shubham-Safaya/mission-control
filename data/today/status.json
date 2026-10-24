@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "bank_left": 43,
-  "streak": 109,
+  "streak": 110,
   "light_mode": false,
-  "post": "Day 77",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: iSpot.tv \u00b7 Sr. Product Manager  \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Find one conference CFP in identity/adtech/data (MAU, Programmatic IO, PyData) and draft a 3-line abstract",
-    "Build: Reply to one EvenOut/Checkpoint user piece of feedback (or share one link)"
+    "Build: Review the portfolio stats strip renders today's date"
   ]
 }
