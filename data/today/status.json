@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-27",
   "bank_left": 42,
-  "streak": 112,
+  "streak": 113,
   "light_mode": false,
-  "post": "Day 78",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: iSpot.tv \u00b7 Sr. Product Manager  \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Pitch one journalist/newsletter (AdExchanger, MarTech.org, Import AI-style) with the synthetic-population demo",
-    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
+    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
   ]
 }
