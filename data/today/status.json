@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "bank_left": 38,
-  "streak": 121,
+  "streak": 122,
   "light_mode": false,
-  "post": "Day 82",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: iSpot.tv \u00b7 Sr. Product Manager  \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Check PyPI downloads milestone for identity-resolution-engine; screenshot + log if a round number passed",
-    "Build: Trim one stale item from mission-control dashboard"
+    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
   ]
 }
