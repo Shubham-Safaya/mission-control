@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "bank_left": 36,
-  "streak": 126,
+  "streak": 127,
   "light_mode": false,
-  "post": "Day 84",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: iSpot.tv \u00b7 Sr. Product Manager  \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Ask one senior colleague/mentee for a dated LinkedIn recommendation referencing specific work",
-    "Build: Trim one stale item from mission-control dashboard"
+    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
   ]
 }
