@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "bank_left": 32,
-  "streak": 135,
+  "streak": 136,
   "light_mode": false,
-  "post": "Day 88",
+  "post": null,
   "tasks": [
-    "Job: 30 fresh matches \u2014 top: iSpot.tv \u00b7 Sr. Product Manager  \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
+    "Job: 30 fresh matches \u2014 top: Roku \u00b7 Senior Product Manager, Advertising \u2013 Exchange Optimization \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: File APAN ARG Vice Chair progress note (role = leading/critical role criterion)",
-    "Build: Review the portfolio stats strip renders today's date"
+    "Build: Trim one stale item from mission-control dashboard"
   ]
 }
