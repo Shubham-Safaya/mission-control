@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-19",
-  "bank_left": 32,
-  "streak": 136,
+  "date": "2026-11-20",
+  "bank_left": 31,
+  "streak": 137,
   "light_mode": false,
-  "post": null,
+  "post": "Day 89",
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Roku \u00b7 Senior Product Manager, Advertising \u2013 Exchange Optimization \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: File APAN ARG Vice Chair progress note (role = leading/critical role criterion)",
-    "Build: Trim one stale item from mission-control dashboard"
+    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
   ]
 }
