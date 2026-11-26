@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-25",
+  "date": "2026-11-26",
   "bank_left": 29,
-  "streak": 142,
+  "streak": 143,
   "light_mode": false,
-  "post": "Day 91",
+  "post": null,
   "tasks": [
     "Job: 30 fresh matches \u2014 top: Roku \u00b7 Senior Product Manager, Advertising \u2013 Exchange Optimization \u2192 apply tonight. Full list: https://shubham-safaya.github.io/job-search-dashboard/",
     "EB1A: Submit the newest Medium draft to one publication (Better Programming/UX Collective-style targets list in eb1a/evidence-tracker.md)",
-    "Build: Check live/ healthcheck issues (should be zero): https://github.com/Shubham-Safaya/live/issues"
+    "Build: Skim yesterday's daily-engineering-log auto-entry; add one Notes line"
   ]
 }
